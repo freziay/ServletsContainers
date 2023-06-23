@@ -16,9 +16,6 @@ public class MainServlet extends HttpServlet {
   private static final String apiPost = "/api/posts";
   private static final String apiPostD = "/api/posts/\\d+";
 
-
-
-
   @Override
   public void init() {
     final var repository = new PostRepository();

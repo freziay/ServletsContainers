@@ -29,7 +29,7 @@ public class MainServlet extends HttpServlet {
         final var service = context.getBean(PostService.class);
 
         // по умолчанию создаётся лишь один объект на BeanDefinition
-        final var isSame = service == context.getBean("postService");
+        final var isSame = service == context.getBean("postController");
     }
 
     @Override

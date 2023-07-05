@@ -2,7 +2,6 @@ package ru.netology.servlet;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.netology.controller.PostController;
-import ru.netology.service.PostService;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +22,7 @@ public class MainServlet extends HttpServlet {
         final var context = new AnnotationConfigApplicationContext("ru.netology");
 
         // получаем по имени бина
-        final var controller = context.getBean("postController");
+        controller = (PostController)context.getBean("postController");
 
     }
 
